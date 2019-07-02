@@ -1,0 +1,18 @@
+.Header {
+    background-color: #347FC4;
+    padding: 25px 200px;
+    color: #ffffff;
+    box-shadow: 0 3px 10px rgba(0,0,0,.1);
+}
+
+.Header h1 {
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.Header p {
+    font-size: 20px;
+    margin: 0;
+}

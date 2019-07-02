@@ -1,0 +1,68 @@
+.TaskListItem {
+    background-color: #eee;
+    border-radius: 3px;
+    margin-bottom: 25px;
+    padding: 25px;
+    position: relative;
+    box-shadow: 0 3px 10px rgba(0,0,0,.3);
+}
+
+.TaskListItem__indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #DC602E;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
+}
+
+.TaskListItem__name {
+    float: left;
+    margin: 0;
+    font-size: 20px;
+}
+
+.TaskListItem__radio-button {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 10px -4px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: relative;
+    cursor: pointer;
+}
+
+.TaskListItem__radio-button--inner::before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    background-color: #484349;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.TaskListItem__remove {
+    float: right;
+    border: none;
+    outline: none;
+    background-color: none;
+    color: #DC602E;
+    cursor: pointer;
+}
+
+.TaskListItem__remove:hover {
+    text-decoration: underline;
+}
+
+.TaskListItem::after {
+    content: '';
+    clear: both;
+    display: table;
+}

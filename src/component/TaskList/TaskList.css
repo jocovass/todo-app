@@ -1,0 +1,7 @@
+.TaskList__ul {
+    width: 70%;
+    margin: 40px auto;
+    list-style: none;
+    min-width: 400px;
+}
+
