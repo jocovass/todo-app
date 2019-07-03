@@ -1,10 +1,84 @@
 .TaskInputModal {
     z-index: 20;
-    position: absolute;
-    width: 500px;
-    height: 350px;
+    position: fixed;
+    width: 40%;
+    min-width: 350px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
     background-color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    padding: 25px 40px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.3);
+    animation-name: rotate;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    perspective-origin: center;
+    transform-style: preserve-3d;
+}
+
+.open {
+    transform: scale(1);
+}
+
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotateY(0deg) scale(0);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotateY(360deg) scale(1);
+    }
+}
+
+.TaskInputModal__title {
+    font-size: 32px;
+    margin-top: 0;
+}
+
+.TaskInputModal__input {
+    display: block;
+    margin: 0 auto 30px;
+    width: 75%;
+    text-align: center;
+    font-family: inherit;
+    color: inherit;
+    font-size: 20px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    border-bottom: 2px solid #ddd;
+    transition: all .3s;
+}
+
+.TaskInputModal__input:focus {
+    border-bottom-color: #347FC4;
+}
+
+.TaskInputModal__btn {
+    width: 125px;
+    padding: 12px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: all .1s ease-in-out;
+}
+
+.TaskInputModal__btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 2px 5px rgba(0,0,0,.3);
+}
+
+.TaskInputModal__add {
+    background-color: #347FC4;
+    margin-right: 15px;
+}
+
+.TaskInputModal__cancel {
+    background-color: #DC602E;
 }

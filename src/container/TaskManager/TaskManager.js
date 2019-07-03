@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import { Route, Link } from 'react-router-dom';
 
 import TaskList from '../../component/TaskList/TaskList';
 import './TaskManager.css';
-import TaskInputModal from '../../component/TaskInputModal/TaskInputModal';
+import Backdrop from '../../component/Backdrop/Backdrop';
 
 class TaskManager extends Component {
     state = {
@@ -16,12 +17,14 @@ class TaskManager extends Component {
     render() {
         return (
             <div>
-                <TaskInputModal />
+                <Route path='/input-modal' component={Backdrop}/>
                 <h2 style={{textAlign: 'center', fontWeight: 'normal'}}>Add atleast 5 tasks per day to make sure 
                     <span style={{display: 'block'}}>you are productive every day!</span>
                 </h2>
                 <TaskList tasks={this.state.tasks}/>
-                <button className='TaskList__add-button'>+</button>
+                <Link to='/input-modal' className='TaskList__add-button'>
+                    <span>+</span>
+                </Link>
             </div>
         );
     }
