@@ -5,6 +5,7 @@
     padding: 25px;
     position: relative;
     box-shadow: 0 3px 10px rgba(0,0,0,.3);
+    transition: all .5s ease-in-out;
 }
 
 .TaskListItem__indicator {
@@ -18,10 +19,18 @@
     transition: all .3s ease-in-out;
 }
 
+.TaskListItem__indicator--done {
+    background-color: #1cb15f;
+}
+
 .TaskListItem__name {
     float: left;
     margin: 0;
     font-size: 20px;
+}
+
+.TaskListItem__name--crossed {
+    text-decoration: line-through;
 }
 
 .TaskListItem__radio-button {
@@ -65,4 +74,8 @@
     content: '';
     clear: both;
     display: table;
+}
+
+.FadeOut {
+    opacity: 0;
 }

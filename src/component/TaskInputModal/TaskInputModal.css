@@ -12,8 +12,9 @@
     padding: 25px 40px;
     box-shadow: 0 3px 10px rgba(0,0,0,.3);
     animation-name: rotate;
-    animation-duration: 1.5s;
+    animation-duration: 1.2s;
     animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(.45,.93,.82,1.46);
     perspective-origin: center;
     transform-style: preserve-3d;
 }
