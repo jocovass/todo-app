@@ -5,7 +5,7 @@
     padding: 25px;
     position: relative;
     box-shadow: 0 3px 10px rgba(0,0,0,.3);
-    transition: all .5s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 .TaskListItem__indicator {
@@ -16,7 +16,7 @@
     height: 3px;
     background-color: #DC602E;
     border-radius: 3px;
-    transition: all .3s ease-in-out;
+    transition: all .1s ease-in-out;
 }
 
 .TaskListItem__indicator--done {
@@ -64,6 +64,7 @@
     background-color: none;
     color: #DC602E;
     cursor: pointer;
+    margin-top: 6px;
 }
 
 .TaskListItem__remove:hover {
@@ -79,3 +80,15 @@
 .FadeOut {
     opacity: 0;
 }
+
+@media only screen and (max-width: 500px) {
+    .TaskListItem {
+        padding: 15px;
+    }
+
+    .TaskListItem__name {
+        font-size: 18px;
+    }
+}
+
+

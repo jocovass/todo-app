@@ -1,6 +1,6 @@
 .Header {
     background-color: #347FC4;
-    padding: 25px 200px;
+    padding: 25px 10vw;
     color: #ffffff;
     box-shadow: 0 3px 10px rgba(0,0,0,.1);
 }
@@ -15,4 +15,21 @@
 .Header p {
     font-size: 20px;
     margin: 0;
+}
+
+@media only screen and (max-width: 800px) {
+    .Header {
+        padding: 25px 0;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .Header h1 {
+        font-size: 28px;
+    }
+
+    .Header p {
+        font-size: 16px;
+    }
 }

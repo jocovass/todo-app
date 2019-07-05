@@ -23,3 +23,18 @@
     display: block;
     margin-top: -13px;
 }
+
+.TaskManager__subtitle {
+    text-align: center; 
+    font-weight: normal;
+}
+
+.TaskManager__subtitle span {
+    display: block;
+}
+
+@media only screen and (max-width: 500px) {
+    .TaskManager__subtitle {
+        font-size: 18px;
+    }
+}
